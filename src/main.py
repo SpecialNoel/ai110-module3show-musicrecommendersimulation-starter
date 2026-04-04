@@ -19,8 +19,14 @@ def main() -> None:
     # Starter example profile
     user_prefs = {"genre": "pop", "mood": "happy", "energy": 0.8,
                   'acousticness': 0.1, 'valence': 0.2}
+    user_prefs_list = [{"genre": "pop", "mood": "energetic", "energy": 0.9,
+                        'acousticness': 0.1, 'valence': 0.2}, 
+                       {"genre": "lofi", "mood": "chill", "energy": 0.3,
+                        'acousticness': 0.1, 'valence': 0.2}, 
+                       {"genre": "pop", "mood": "intense", "energy": 0.8,
+                        'acousticness': 0.1, 'valence': 0.2}]
 
-    recommendations = recommend_songs(user_prefs, songs, k=5)
+    recommendations = recommend_songs(user_prefs_list[0], songs, k=5)
 
     print("\n" + "=" * 50)
     print("  TOP RECOMMENDATIONS")

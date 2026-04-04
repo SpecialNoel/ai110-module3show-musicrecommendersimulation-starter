@@ -56,6 +56,7 @@ class Recommender:
             reasons.append(f"Mood matches your favorite '{song['mood']}' (+{mood_points:.2f})")
         else:
             reasons.append(f"Mood '{song['mood']}' does not match your favorite '{user['mood']}' (+0.00)")
+        mood_points = 0
 
         genre_points = 0.20 if user['genre'] == song['genre'] else 0
         score += genre_points
